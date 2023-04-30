@@ -63,6 +63,7 @@ async function renderImagesOnLoadMore() {
     scrollBy();
 
     const newGalleryItems = galleryEl.querySelectorAll('.gallery a');
+    const lightbox = new SimpleLightbox(newGalleryItems);
     newGalleryItems.forEach(item => {
       item.addEventListener('click', e => {
         e.preventDefault();
